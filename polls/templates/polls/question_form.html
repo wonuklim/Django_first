@@ -1,0 +1,43 @@
+{% extends "polls/base.html" %} 
+{% load static %}
+
+{% block title %} 질문 작성/수정 {% endblock %}
+
+{% block content %}
+<h2>질문 입력</h2>
+<form method="post">
+{% csrf_token %} {{ form.as_p }}
+
+<button type="submit">저장</button>>
+</form>
+{% endblock %}
+<!-- <form method="post">
+  {% csrf_token %}
+
+  <p>
+    <label for="{{ form.question_text.id_for_label }}">질문:</label>
+    {{ form.question_text }}
+    {{ form.question_text.errors }}
+  </p>
+
+  <p>
+    <label for="{{ form.pub_date.id_for_label }}">날짜:</label>
+    {{ form.pub_date }}
+    {{ form.pub_date.errors }}
+  </p>
+
+  <button type="submit">저장</button>
+</form> -->
+
+
+
+
+
+<!-- <label for={{question_text}}>질문</label>
+{{question_text}}
+{{question_text.errors}}
+
+<label for={{pub_date}}>게시일</label>
+{{pub_date}}
+{{pub_date.errors}} -->
+
